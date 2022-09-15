@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="game"></div>
+<script >
+    let hero = new Hero('pikachu.png', 20, 30, 200);
+    function start() {
+        if (hero.left < window.innerWidth - hero.size) {
+            hero.getmoveRight();
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start,500)
+    }
+    start();
+</script>
+</body>
+</html>
